@@ -14,18 +14,19 @@ for (let age = 30; age < 40; age++) {
   }
   
   
-  wrapGifts(gifts);
-  const cards = [ 'Guadalupe', 'Ollie', 'Aki' ] ;
-  function writeCards(cards){
-      for (let i = 0; i < cards.length; i++){
-          console.log(`Thank you, ${cards[i]} for the wonderful Christmas gift!`)
-      }
-    return cards;
+  function writeCards( names, event ) {
+    let thankYouCards = []
+    for ( let i = 0; i < namesArray.length; i++ ) {
+      thankYouCards.push( `Thank you, ${names[i]}, for the wonderful ${event} gift!` )
+    }
+    return thankYouCards
   }
-  writeCards(cards);
-  function countDown(i) {
-    let countDown = i;
-    while (countDown >= 0) {
-      console.log(countDown--);
-    }}
-    countDown(10)
+  writeCards(["Guadalupe", "Ollie", "Aki"], "suprise");
+  
+  function countDown(number) {
+      while (number > 0 ) {
+          console.log(number)
+          number -= 1;
+      }
+      console.log(number);
+    }
